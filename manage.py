@@ -3,7 +3,7 @@ from flask_script import Server
 from application import manage, app
 import www
 
-manage.add_command('runserver', Server(port=app.config['SERVERPORT'], use_debugger=True, use_reloader=True))
+manage.add_command('runserver', Server(host='0.0.0.0', port=app.config['SERVERPORT'], use_debugger=True, use_reloader=True))
 manage.add_command('db', MigrateCommand)
 
 

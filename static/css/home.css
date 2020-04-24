@@ -1,0 +1,158 @@
+.head{
+	height: 70px;
+}
+ul{
+	padding: 0px;
+}
+.me-container{
+	height: 70px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9900;
+	width: 100%;
+	background-color: #000000;
+}
+.nav{
+	position: relative;
+	width: 85%;
+	height: 70px;
+	margin: 0px auto;
+}
+.nl{
+	position: absolute;
+	left: 0;
+	height: 70px;
+	width: 70%;
+}
+.logo img{
+	max-width: 120px;
+	height: 65px;
+}
+.nav-banner{
+	position: absolute;
+	top: 26px;
+	left: 80px;
+	z-index: 10;
+	height: 16px;
+}
+.nav-banner .nav-item{
+	float: left;
+	height: 15px;
+	display: block;
+	margin: 2px 10px;
+}
+.nav-banner .nav-item .item{
+	display: block;
+	height: 15px;
+	line-height: 14px;
+	font-size: 20px;
+	font-weight: 300;
+	color: #999;
+	text-align: center;
+	text-decoration: none;
+}
+.nav-banner .nav-item .item:hover{
+	color: #FFE100;
+}
+.nr{
+	position: absolute;
+	right: 0;
+	height: 65px;
+	width: 30%;
+	color: #ccc;
+}
+.nr .nav-info{
+	position: absolute;
+	width: 460px;
+	top: 18px;
+	z-index: 10;
+}
+.nr .nav-info .user{
+	height: 15px;
+	display: block;
+}
+.nr .nav-info .search{
+	float: left;
+}
+#search{
+	width: 300px;
+}
+.nr .nav-info .user{
+	float: right;
+}
+
+.me-main{
+	width: 85%;
+	margin: 0px auto;
+}
+.breadcrumb {
+	color: #ccc;
+	background-color: white !important;
+}
+
+input{
+	padding: 2px 5px;
+}
+.box-l, .box-r{
+	width: 750px;
+	height: 750px;
+	display: inline-block;
+}
+.box-l{
+	margin-right: 22px;
+	overflow: hidden;
+}
+.video-cover{
+    z-index: 9;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.video-cover:hover{
+    transition: 1.5s transform;
+    transform: scale(1.1);
+}
+
+.box .box-inner{
+	padding-bottom: 30px;
+}
+.box-r .ul{
+	float: left;
+	height: 750px;
+	width: 363px;
+}
+.ul-l{
+	margin-right: 22px;
+}
+.li{
+	height: 364px;
+	width: 364px;
+	overflow: hidden;
+}
+.li-u{
+	margin-bottom: 22px;
+}
+
+.footer{
+	margin-top: 20px;
+	height: 100px;
+	background-color: #000;
+	text-align: center;
+}
+.footer .msg-item{
+	line-height: 100px;
+	text-decoration: none;
+	color: #ccc;
+	font-size: 20px;
+	margin: 2px 20px;
+}
+.footer span{
+	font-size: 20px;
+	color: #ccc;
+}
+.footer .msg-item:hover{
+	color: #FFE100;
+}

@@ -1,8 +1,8 @@
-from flask import Flask
-
+from flask import Flask, render_template
 
 # 创建应用类 继承Flask
 from flask_migrate import Migrate
+from flask_redis import FlaskRedis
 from flask_script import Manager
 from flask_sqlalchemy import SQLAlchemy
 
@@ -22,6 +22,15 @@ class Application(Flask):
 db = SQLAlchemy()
 # 实例化app对象
 app = Application(__name__)
+redis_obj = FlaskRedis(app)
+
+
+# 404处理
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('home/404.html'), 404
+
+
 # 包装/扩展app对象
 manage = Manager(app)
 

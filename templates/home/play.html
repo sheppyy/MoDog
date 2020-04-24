@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PLAY</title>
+    <link rel="Shortcut Icon" href="{{ url_for('static',filename='img/favicon.ico') }}" sizes="48x48">
+    <link rel="stylesheet" href="{{ url_for('static',filename='DPlayer/DPlayer.min.css') }}"/>
+    {#        本地dplayer用不了就用cdn的#}
+    {#    <link href="https://cdn.bootcss.com/dplayer/1.25.0/DPlayer.min.css" rel="stylesheet">#}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/common.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/home.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap3.3.7/css/bootstrap.min.css') }}"/>
+</head>
+<body>
+<div class="container">
+    <div class="main" id="main">
+        <h3>PLAY PAGE</h3>
+        <div class="video">
+            <div id="dplayer" style="height: 650px"></div>
+        </div>
+        <hr>
+    </div>
+    <section style="height: 300px"></section>
+</div>
+</body>
+<script src="{{ url_for('static',filename='js/jquery-1.11.3.js') }}"></script>
+<script src="{{ url_for('static',filename='DPlayer/DPlayer.min.js') }}"></script>
+{#        <script src="https://cdn.bootcss.com/dplayer/1.25.0/DPlayer.min.js"></script>#}
+
+{#        没有这个会应该hls报错#}
+<script src="https://cdn.bootcss.com/hls.js/8.0.0-beta.3/hls.js"></script>
+
+<script type="text/javascript">
+    var item = JSON.parse(window.localStorage.getItem('item'))
+    console.log(item)
+    var dp = new DPlayer({
+        container: document.getElementById('dplayer'),  // 容器对象
+        screenshot: true,  // 屏幕截图
+        // 视频参数
+        video: {
+            pic: item.cover,  // 封面图片
+            url: item.video_url+'.mp4',  //视频地址
+            thumbnails: item.cover,  //缩略图
+        },
+        // 弹幕参数
+        danmaku: {
+            id: '1',  // 编号
+            api: '/dm/',  // 弹幕请求地址
+        },
+        logo: '{{ url_for("static",filename="img/girl.jpg") }}',  // 左上角的logo,
+        hotkey: true, //开启热键，支持快进、快退、音量控制、播放暂停
+        volume: 0.6  // 默认音量大小 60%
+    });
+</script>
+<script type="text/javascript">
+    var item = JSON.parse(window.localStorage.getItem('item'))
+    $(document).ready(function () {
+        $('#main').append('<h3>收藏人数：'+ item.fav +'</h3><hr>'+'<h3>'+ item.title +'</h3><hr><h3>'+ item.summary +'</h3>')
+    })
+
+</script>
+</html>

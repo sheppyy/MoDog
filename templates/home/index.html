@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>HOME</title>
+    <link rel="Shortcut Icon" href="{{ url_for('static',filename='img/favicon.ico') }}" sizes="48x48">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/common.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/home.css') }}"/>
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static',filename='bootstrap3.3.7/css/bootstrap.min.css') }}"/>
+</head>
+<body>
+<div class="head">
+    <div class="me-container">
+        <div class="nav">
+            <div class="nl">
+                <div class="logo">
+                    <a href="#">
+                        <img src="{{ url_for('static',filename='img/horse.png') }}" alt="">
+                    </a>
+                </div>
+                <ul class="nav-banner">
+                    <li class="nav-item"><a class="item" href="#">首页</a></li>
+                    <li class="nav-item"><a class="item" href="#">社会</a></li>
+                    <li class="nav-item"><a class="item" href="#">世界</a></li>
+                    <li class="nav-item"><a class="item" href="#">旅行</a></li>
+                    <li class="nav-item"><a class="item" href="#">科技</a></li>
+                    <li class="nav-item"><a class="item" href="#">生活</a></li>
+                    <li class="nav-item"><a class="item" href="#">娱乐</a></li>
+                    <li class="nav-item"><a class="item" href="#">汽车</a></li>
+                    <li class="nav-item"><a class="item" href="#">美食</a></li>
+                    <li class="nav-item"><a class="item" href="#">音乐</a></li>
+                    <li class="nav-item"><a class="item" href="#">拍客</a></li>
+                    <li class="nav-item"><a class="item" href="#">排行榜</a></li>
+                </ul>
+            </div>
+            <div class="nr">
+                <ul class="nav-info">
+                    <li class="search">
+                        <input type="text" name="key" id="search" value="" placeholder="输入搜索内容"/>
+                        <button type="button">
+                            <svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                      d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"
+                                      clip-rule="evenodd"/>
+                                <path fill-rule="evenodd"
+                                      d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
+                                      clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="user">
+                        <svg class="bi bi-person-fill" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                  d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                                  clip-rule="evenodd"/>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="me-main">
+    <div class="main">
+
+        <ol class="breadcrumb">
+            <li><h3>首页 | HOME</h3></li>
+        </ol>
+        <div class="box" id="box">
+            <div class="box-inner">
+                <div class="box-l">
+                    <div title="{{ data[0].title }}" onclick="toPlay({{ data[0] }})" class="video-cover"
+                         style="background-image: url({{ data[0].cover }});">
+                    </div>
+                </div>
+                <div class="box-r">
+                    <ul class="ul ul-l">
+                        <li>
+                            <div class="li li-u">
+                                <div title="{{ data[1].title }}" onclick="toPlay({{ data[1] }})" class="video-cover"
+                                     style="background-image: url({{ data[1].cover }});">
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="li">
+                                <div title="{{ data[2].title }}" onclick="toPlay({{ data[2] }})" class="video-cover"
+                                     style="background-image: url({{ data[2].cover }});"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="ul">
+                        <li>
+                            <div class="li li-u">
+                                <div title="{{ data[3].title }}" onclick="toPlay({{ data[3] }})" class="video-cover"
+                                     style="background-image: url({{ data[3].cover }});"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="li">
+                                <div title="{{ data[4].title }}" onclick="toPlay({{ data[4] }})" class="video-cover"
+                                     style="background-image: url({{ data[4].cover }});"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="footer">
+    <div class="msg">
+        <a class="msg-item" href="#">关于我们</a>
+        <span>|</span>
+        <a class="msg-item" href="#">联系我们</a>
+        <span>|</span>
+        <a class="msg-item" href="#">版权声明</a>
+        <span>|</span>
+        <a class="msg-item" href="#">用户协议 </a>
+        <span>|</span>
+        <a class="msg-item" href="#">投诉与建议</a>
+        <span>|</span>
+        <a class="msg-item" href="#">工作机会</a>
+        <span>|</span>
+        <a class="msg-item" href="#">广告服务</a>
+        <span>|</span>
+        <a class="msg-item" href="#">合作伙伴</a>
+        <span>|</span>
+        <a class="msg-item" href="#">关注我们</a>
+    </div>
+</div>
+</body>
+<script src="{{ url_for('static',filename='js/jquery-1.11.3.js') }}" type="text/javascript" charset="utf-8"></script>
+<script src="{{ url_for('static',filename='bootstrap3.3.7/js/bootstrap.min.js') }}" type="text/javascript"
+        charset="utf-8"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $.ajax({
+            type: 'get',
+            url: '/data',
+            success: function (data) {
+                console.log(data)
+                /*
+                for (var i = 0; i < data.data.length; i++) {
+                    var el = '<div class="box-inner"><div class="box-l"><div id="play" class="img" style="background-image: url(' + data.data[i].cover + ');"></div></div><div class="box-r"><ul class="ul ul-l"><li><div class="li li-u"><div class="img" style="background-image: url(' + data.data[++i].cover + ');"></div></div></li><li><div class="li"><div class="img" style="background-image: url(' + data.data[++i].cover + ');"></div></div></li></ul><ul class="ul"><li><div class="li li-u"><div class="img" style="background-image: url(' + data.data[++i].cover + ');"></div></div></li><li><div class="li"><div class="img" style="background-image: url(' + data.data[++i].cover + ');"></div></div></li></ul></div></div>';
+                    $('#box').append(el);
+                }*/
+
+            },
+            error: function (xhr, type, errorThrown) {
+                console.log('ops')
+            }
+        });
+    })
+</script>
+<script type="text/javascript">
+    function toPlay(item) {
+        window.localStorage.setItem('item', JSON.stringify(item))
+        console.log(item)
+        window.open('/show', 'blank')
+    }
+</script>
+</html>

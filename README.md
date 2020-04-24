@@ -55,17 +55,17 @@ MoDog是一个基于flask实现的案例，零零碎碎涉及了爬虫（request
 
 #### 原网站的图：
 
-![res5](F:\Python\Web\Flask\MoDog\static\img\res4.png)
+![res5](https://github.com/sheppyy/MoDog/blob/master/static/img/res4.png)
 
-![res5](F:\Python\Web\Flask\MoDog\static\img\res5.png)
+![res5](https://github.com/sheppyy/MoDog/blob/master/static/img/res5.png)
 
 
 
 #### 本案例的图：
 
-![res5](F:\Python\Web\Flask\MoDog\static\img\res3.png)
+![res5](https://github.com/sheppyy/MoDog/blob/master/static/img/res3.png)
 
-![res5](F:\Python\Web\Flask\MoDog\static\img\res6.png)
+![res5](https://github.com/sheppyy/MoDog/blob/master/static/img/res6.png)
 
 # 说明
 
@@ -77,13 +77,13 @@ MoDog是一个基于flask实现的案例，零零碎碎涉及了爬虫（request
 
   修改原因：
 
-  ![res5](F:\Python\Web\Flask\MoDog\static\img\res1.png)
+  ![res5](https://github.com/sheppyy/MoDog/blob/master/static/img/res1.png)
 
   这里的样式我在外部怎么都强制改不了（太菜了...）。只能对源码下手了...
 
   修改了的内容：
 
-  ![res5](F:\Python\Web\Flask\MoDog\static\img\res2.png)
+  ![res5](https://github.com/sheppyy/MoDog/blob/master/static/img/res2.png)
 
   修改了width: 33%; --->width: auto;
 

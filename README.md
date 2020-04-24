@@ -21,7 +21,7 @@ MoDog是一个基于flask实现的案例，零零碎碎涉及了爬虫（request
 
 2. 配置config\local_setttings.py文件
 
-   该文件主要配置MySQL和redis，改成自己的即可，其他的按需改。
+   该文件主要配置MySQL和redis，改成自己的即可，其他的按需改。其实这里用不到MySQL，习惯性的搭一下...。
 
 3. 创建虚拟环境
 
